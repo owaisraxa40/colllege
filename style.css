@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #ff5733;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.quote {
+    font-size: 1.3em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.gallery img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background: linear-gradient(to right, #ff6f61, #ff9068);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff5733, #ff8f70);
+}
+
+#message-box {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #ff5733;
+    font-family: 'Great Vibes', cursive;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Floating Emoji Animation */
+@keyframes floating-emojis {
+    0% { transform: translateY(0px); opacity: 0.8; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(-40px); opacity: 0; }
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2em;
+    animation: floating-emojis 2s infinite;
+}
